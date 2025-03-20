@@ -1,0 +1,230 @@
+@import "./globals.scss";
+
+* {
+  letter-spacing: 0.1rem;
+  text-decoration: none !important;
+}
+
+.fz32 {
+  font-size: 32px;
+}
+.fz26 {
+  font-size: 26px;
+}
+.fz22 {
+  font-size: 22px;
+}
+.fz18 {
+  font-size: 18px;
+}
+.fz16 {
+  font-size: 16px;
+}
+.fz14 {
+  font-size: 14px;
+}
+.fz12 {
+  font-size: 12px;
+}
+.fz10 {
+  font-size: 10px;
+}
+
+.bannerbar {
+  padding-left: 15%;
+}
+
+.banner-t {
+  height: 520px;
+  background-image: url("/rent_images/rent-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 80%;
+}
+
+.banner-l {
+  left: -10.1%;
+  bottom: 5%;
+}
+
+.title-w {
+  margin-bottom: -90px;
+}
+
+.title-p {
+  max-width: 680px;
+  margin-left: 2rem;
+  padding: 0.6rem 0.6rem 0.6rem 3rem;
+}
+
+.text-over {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius;
+}
+
+.main-image {
+  height: 520px; // 左側主圖固定高度
+}
+
+.full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // 確保圖片「滿版裁切，比例不變」
+}
+
+/* 右側區塊：固定 720px 高度，內部 4 張圖片平均分 */
+.right-image-container {
+  height: 520px; // 確保不超出
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // 讓 4 張圖片平均分配
+}
+
+.small-image {
+  height: 25%; // 確保 4 張圖片各佔 1/4 區塊
+}
+
+.image-container.small-image:nth-child(4) {
+  margin: 0 !important;
+}
+
+button.position-absolute.bottom-0.start-50.translate-middle-x {
+  width: 100%;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+}
+
+button.position-absolute.top-0.start-50.translate-middle-x {
+  width: 100%;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+}
+
+.btn.btn-primary.text-white.fz22:hover {
+  background: $secondary;
+}
+
+.rent_contact {
+  padding: 16px;
+  position: sticky;
+  top: 10px;
+  border: 2px solid $primary;
+  border-radius: 10px;
+  background: white;
+}
+
+//card
+.card {
+  border: hidden;
+}
+
+.card:hover {
+  // border: 2px solid $secondary;
+  outline: 3px solid $secondary;
+}
+
+.fz32.fw-bold {
+  color: $secondary;
+}
+.fz32.fw-bold::before {
+  content: "$";
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.container-fluid.fz14 .row .col {
+  padding-right: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.container-fluid.fz14 .row .col::after {
+  content: "|";
+  color: #dfdfdf;
+  margin-left: 1rem;
+  line-height: 14px;
+  font-weight: 100;
+}
+
+.container-fluid.fz14 .row .col:last-child::after {
+  content: "";
+}
+
+//詳情頁
+
+//Carousel
+img.d-block.w-100 {
+  object-fit: cover;
+}
+
+.container-fluid.fz18.p-0.mb-3 .row .col {
+  padding-right: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.container-fluid.fz18.p-0.mb-3 .row .col::after {
+  content: "|";
+  color: #dfdfdf;
+  margin-left: 1rem;
+  line-height: 18px;
+  font-weight: 100;
+}
+
+.container-fluid.fz18.p-0.mb-3 .row .col:last-child::after {
+  content: "";
+}
+
+//rentmap-card
+.p-2.overflow-y-auto.col-sm-3{
+  height: calc(100vh - 72px); // 列表高度與地圖相同
+}
+
+
+.card-img-top{
+  object-fit: cover;
+  border-radius: $border-radius;
+}
+
+.col .fz26.fw-bold::before {
+  content: "$";
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.col .fz26.fw-bold{
+  color: $secondary;
+}
+
+@media screen and (max-width: 992px) {
+.fz32{
+  font-size: 24px !important;
+}
+
+
+
+
+}

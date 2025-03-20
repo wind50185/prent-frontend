@@ -1,0 +1,170 @@
+.service_calendar {
+  border: 1px solid #bababa;
+}
+
+.service_calendar_year {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.service_calendar_year_text {
+  font-size: 16px;
+  color: #4e4e4e;
+}
+
+.service_calendar_year_icon {
+  font-size: 24px;
+  color: #4e4e4e;
+  cursor: pointer;
+}
+
+.service_calendar_year_icon_disabled {
+  font-size: 24px;
+  color: #bababa;
+
+}
+
+.service_calendar_week_name {
+  color: #4e4e4e;
+  background-color: white;
+  font-size: 16px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.service_calendar_date {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: calc((100% - 350px) / 6);
+}
+
+.service_calendar_date_btn {
+  border: 1px solid #bababa;
+  color: #4e4e4e;
+  background-color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-top: calc((100% - 350px) / 6);
+}
+
+.service_calendar_date_btn:hover {
+  border: 1px solid #ec9466;
+}
+
+.service_calendar_date_btn_selected {
+  border: 1px solid #ec9466;
+  background-color: #ec8692;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-top: calc((100% - 350px) / 6);
+}
+
+.service_calendar_date_btn_sold_out {
+  border: 1px solid #bababa;
+  background-color: #f1f1f1;
+  color: #bababa;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-top: calc((100% - 350px) / 6);
+}
+
+.service_calendar_date_btn_disabled {
+  border: none;
+  color: #bababa;
+  background-color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-top: calc((100% - 350px) / 6);
+}
+
+.service_calendar_date_btn_disabled:hover {
+  /* cursor: not-allowed; */
+  cursor: default;
+}
+
+.service_calendar_date_btn_today {
+  color: #ec9466;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin-top: calc((100% - 350px) / 6);
+  text-decoration: underline 1px #ec9466;
+}
+
+/* //* 平板 md 768 - 991 */
+@media screen and (min-width: 768px) {
+  .service_calendar {
+    width: 80%;
+  }
+
+  .service_calendar_week_name {
+    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .service_calendar_date {
+    gap: calc((100% - 420px) / 6);
+  }
+
+  .service_calendar_date_btn {
+    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    margin-top: calc((100% - 420px) / 6);
+  }
+
+  .service_calendar_date_btn_selected {
+    width: 60px;
+    height: 60px;
+    margin-top: calc((100% - 420px) / 6);
+  }
+
+  .service_calendar_date_btn_sold_out {
+    width: 60px;
+    height: 60px;
+    margin-top: calc((100% - 420px) / 6);
+  }
+
+  .service_calendar_date_btn_disabled {
+    width: 60px;
+    height: 60px;
+    margin-top: calc((100% - 420px) / 6);
+  }
+
+  .service_calendar_date_btn_today {
+    width: 60px;
+    height: 60px;
+    margin-top: calc((100% - 420px) / 6);
+  }
+}
+
+/* //* PC lg 992 up */
+@media screen and (min-width: 992px) {
+  .service_calendar {
+    width: 60%;
+    max-width: 560px;
+  }
+}

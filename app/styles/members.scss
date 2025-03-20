@@ -1,0 +1,549 @@
+@import "./globals.scss";
+
+.quick_insert{
+    opacity: 0;
+}
+
+.fixed_bottom{
+    margin-top: auto;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 60px - 132px - 72px - 82px); /* 確保內容區域至少佔滿整個頁面的高度 */
+}
+
+.article_icon{
+    font-size: $fz22;
+    font-weight: 700;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.article_title{
+    font-size: $fz32;
+    font-weight: 700;
+    color: $gray;
+}
+
+.article_name{
+    font-weight: 500;
+    color: $secondary;
+    font-size: $fz22;
+}
+
+.article_time{
+    font-size: 14px;
+}
+
+.article_text{
+    font-size: 16px;
+    font-weight: 300;
+    white-space: pre-line;
+    
+}
+
+.photo-container {
+    width: 300px;  /* 設定容器寬度 */
+    height: 300px; /* 設定容器高度 */
+    overflow: hidden;  /* 隱藏超出容器的部分，但不會裁剪圖片 */
+}
+
+.article_photo {
+    width: 100%;  /* 寬度佔滿容器 */
+    height: 100%; /* 高度佔滿容器 */
+    object-fit: contain; /* 保持等比例顯示，圖片不會被裁剪 */
+}
+
+.goodbadcollect{
+    margin:20px 0 10px 0;
+    font-size: $fz18;
+}
+
+.goodbad{
+    width: 15%;
+}
+
+.goodbadcollect i,
+.goodbadcollect span
+{
+    color: $gray;
+}
+
+.comment_photo{
+    align-self: flex-start;
+}
+
+.re_name{
+    font-weight: 500;
+    color: $secondary;
+    font-size: $fz18;
+}
+
+.re_time{
+    font-size: $fz12;
+}
+
+.re_content{
+    font-weight: 300;
+    white-space: pre-line;
+}
+
+.photo_set{
+    height: 100px;
+    width: 100px;
+}
+
+.comment_edit{
+    font-size: $fz18;
+    color: $secondary;
+    cursor: pointer;
+}
+
+.textbox{
+    position: relative;
+}
+
+.send_icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: white;
+    color: $primary;
+    border: 0;
+    cursor: pointer; //鼠標變手指
+}
+
+.list_collect_icon{
+    margin-right: 20px;
+    background-color: white;
+    color: red;
+    border: 0;
+    cursor: pointer;
+}
+
+.reply_collect_icon{
+    margin-right: 20px;
+    background-color: white;
+    border: 0;
+    cursor: pointer;
+}
+.reply_collect_icon>.bi-heart-fill{
+    color: red;
+}
+
+.fa_icon{
+    margin-right: 20px;
+    background-color: white;
+    color: $primary !important;
+    border: 0;
+    cursor: pointer;
+}
+
+// 討論區主頁
+.left_list_fixed{
+    // position: fixed;
+    position: sticky;
+    top:76px;
+}
+
+// cate
+.discuss_cate{
+    padding: 8px 0px;
+    margin: 0 -12px 0 8px;
+}
+
+// 列表頁的css
+.discuss_list_title{
+    font-size: $fz22;
+    font-weight: 500;
+    color: $gray;
+    margin-top: 8px;
+}
+
+.discuss_list_title_icon{
+    color: #f0c9b4 ;
+}
+
+.discuss_list_content {
+    font-weight: 200;
+    margin-left: 5px !important;
+    display: -webkit-box; /* 设置为多行盒子 */
+    -webkit-line-clamp: 1; /* 限制最多显示3行 */
+    -webkit-box-orient: vertical; /* 设置为垂直方向排列 */
+    overflow: hidden; /* 隐藏超出部分 */
+    text-overflow: ellipsis; /* 显示省略号 */
+    height: 1.6em; /* 高度设置为大约三行的高度（根据字体调整） */
+    line-height: 1.6em; /* 行高 */
+    font-size: 14px;
+    margin: 0;
+}
+
+.discuss_post_btn{
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 7px 12px;
+}
+
+.discuss_goodbad{
+    width: 20%;
+    font-weight: 200;
+}
+
+.discuss_goodbadcollect{
+    margin: 0;
+    font-size: 16px;
+}
+
+.discuss_list:hover{
+    background-color: $bg;
+    cursor: pointer;
+}
+
+.discuss_list_lick{
+    text-decoration: none;
+    color: black;
+}
+
+.discuss_class{
+    color: $gray;
+    background-color: $bg;
+    border: 2px $secondary solid;
+    padding: 2px;
+    border-radius: 5px;
+}
+//
+
+
+// 發文頁面
+.post_card_outsider{
+    padding: 1rem 0;
+}
+
+.post_card{
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 72px - 132px - 32px);
+}
+
+.post_name{
+    font-weight: 500;
+    color: $secondary;
+    font-size: $fz18;
+}
+
+.post_time{
+    font-size: $fz12;
+}
+
+.need_know{
+    color: $primary;
+    cursor: pointer;
+}
+
+.custom-tooltip{
+    font-size: $fz14 !important;
+}
+
+.post_photo{
+    font-size: $fz22;
+    color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.post_textarea{
+    border-radius: 10px !important;
+    height: calc(100vh - 72px - 132px - 32px - 58px - 38px - 82px - 38.78px - 31px - 16px - 16px);
+}
+
+.post_btn{
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 6px 10px;
+}
+
+.post_cancer{
+    flex: block;
+    padding-left: 5px;
+    justify-content: center;
+    align-content: center;
+    padding-right: 5px;
+    color: $gray;
+    background-color: white;
+}
+
+.post_cancer:hover {
+    background-color: white !important;
+    color: $gray !important;
+}
+
+.title-length {
+    font-size: $fz16;
+    color: $gray;
+}
+
+.title-length.warning {
+    color: red;
+}
+
+// 登入頁面
+.login_text{
+    font-size: $fz26;
+    font-weight: 700;
+}
+
+.login_form{
+    padding: 0.6rem 1.0rem !important;
+    font-size: 0.9rem !important;
+}
+
+.forget_password{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: $gray;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.login_btn{
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: $fz18;
+}
+
+.login_q_res{
+    font-size: 14px;
+}
+
+.login_res{
+    color: $primary;
+    text-decoration: none !important;
+}
+
+.login_res:hover {
+    text-decoration: underline;
+}
+
+.login_google{
+    font-size: $fz32;
+    cursor: pointer;
+}
+
+.login_alert {
+    min-height: 18px;
+    font-size: $fz12;
+    display: flex;
+    align-items: center;
+}
+
+.eye_button_login{
+    position: absolute;
+    top : 52%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: white;
+    color: $primary;
+    border: 0;
+    cursor: pointer; //鼠標變手指
+}
+
+// 註冊頁
+.re_form{
+    padding: 0.6rem 1.0rem !important;
+    font-size: 0.9rem !important;
+    width: 530px !important;
+}
+
+.border_danger{
+    // color: rgb(133, 192, 38) !important;
+    outline: 2px rgb(159, 228, 48) solid !important;
+}
+
+.react-datepicker__current-month {
+    display: none !important;
+}
+
+.react-datepicker__header{
+    background-color: #fdf1e8 !important;
+}
+
+.react-datepicker__month-dropdown-container{
+    margin: 0 0 0 20px !important;
+}
+
+.react-datepicker__month-select{
+    border: 0;
+    background-color: $bg !important;
+}
+
+.react-datepicker__year-select{
+    border: 0;
+    background-color: $bg !important;
+}
+
+.react-datepicker__header__dropdown{
+    margin: 0px 0px 5px 0px !important;
+}
+
+.eye_button{
+    position: absolute;
+    top : 65%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: white;
+    color: $primary;
+    border: 0;
+    cursor: pointer; //鼠標變手指
+}
+
+// 編輯頁
+.edit_text{
+    font-size: $fz26;
+    font-weight: 700;
+}
+
+.edit_form{
+    padding: 0.6rem 1.0rem !important;
+    font-size: 0.9rem !important;
+    width: 350px !important;
+}
+
+.sort-box::after {
+    display: none !important;
+}
+
+// 編輯頁生日元件
+.edit_birthcard{
+    border: none;
+}
+
+.edit_birthcard_detail{
+    font-size: $fz16;
+    width: 100%;
+    // max-width: none !important;
+    padding: 8.5px 9.6px;
+    border-radius: 5px;
+    border: 1px $primary solid;
+    color: $primary;
+    cursor: pointer;
+}
+
+.sort-box.w-100.text-start.ps-3.dropdown-toggle.btn.btn-primary{
+    padding: 8.5px 16px !important;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  width: 100% !important;  /* 強制寬度為 100% */
+}
+
+.edit_birthcard_detail:hover{
+    background-color: $primary;
+    color: white;
+}
+
+.edit_birthcard_detail:active{
+    background-color: $gray;
+    color: white;
+}
+
+.edit_birthcard_detail::placeholder{
+    color: $primary;
+}
+
+.edit_birthcard_detail:hover::placeholder{
+    color: white;
+}
+
+/* 點擊後不顯示黑色邊框 */
+.edit_birthcard_detail:focus {
+    outline: none; /* 去掉預設的藍色或黑色邊框 */
+    border: 1px solid $primary; /* 可選，設置一個自定義的邊框顏色 */
+}
+
+.react-datepicker__triangle {
+    display: none;
+}
+
+.react-datepicker__day--today {
+    background-color: rgb(233, 233, 233) !important;
+    color: black;
+}
+
+.react-datepicker__day--selected {
+    background-color: $primary !important;
+    color: white;
+}
+
+// 會員頁
+.members_name{
+    font-size: $fz22;
+    font-weight: 500;
+    color: $secondary;
+}
+
+.members_content{
+    font-size: $fz16;
+    font-weight: 400;
+}
+
+.members_tobepro{
+    font-size: $fz12;
+    color: $gray;
+    cursor: pointer;
+}
+
+
+/* 平板 md 768 - 991 */
+@media screen and (max-width: 768px) {
+    .nav-link{
+        padding: 2px 4px;
+    }
+
+    .discuss_post_btn{
+        border-radius: 5px;
+        font-size: $fz12;
+        padding: 7px 10px;
+    }
+
+    .article_icon{
+        font-size: $fz18;
+        font-weight: 700;
+    }
+
+    .left_list_fixed {
+        position: fixed;
+        top: 59px;
+        width: calc(100% - 24px);
+        background-color: white;
+        z-index: 1000;
+    }
+
+    .discuss_cate{
+        padding:0px;
+        margin:0px;
+    }
+
+    .left_list_lg{
+        width: 100%;
+    }
+
+    .post_card_outsider{
+        padding: 0;
+    }
+    
+    .post_card{
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+        height: calc(100vh - 59px - 86.09px - 32px);
+        margin: 0 12px !important;
+    }
+  }

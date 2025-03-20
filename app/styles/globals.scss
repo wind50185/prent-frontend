@@ -1,0 +1,625 @@
+/* B 700 */
+@font-face {
+  font-family: "GenSenRounded2TW";
+  src: url("/fonts/GenSenRounded2TW-B.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* M 500 */
+@font-face {
+  font-family: "GenSenRounded2TW";
+  src: url("/fonts/GenSenRounded2TW-M.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* R 400 */
+@font-face {
+  font-family: "GenSenRounded2TW";
+  src: url("/fonts/GenSenRounded2TW-R.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* L 200 */
+@font-face {
+  font-family: "GenSenRounded2TW";
+  src: url("/fonts/GenSenRounded2TW-L.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+// 自訂 Bootstrap 變數
+$primary: #ec9466; // 修改主要按鈕顏色
+$secondary: #ec8692;
+$gray: #4e4e4e;
+$border-radius: 0.3rem;
+$bg: #fffbf8;
+
+// 字體大小
+$fz32: 32px;
+$fz26: 26px;
+$fz22: 22px;
+$fz18: 18px;
+$fz16: 16px;
+$fz14: 14px;
+$fz12: 12px;
+
+// 顏色
+$gray-light: #bababa;
+
+// 重新導入 Bootstrap（應用新變數）
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  font-family: "GenSenRounded2TW", sans-serif;
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.2rem;
+}
+
+.fz32 {
+  font-size: $fz32 !important;
+}
+.fz26 {
+  font-size: $fz26 !important;
+}
+.fz22 {
+  font-size: $fz22 !important;
+}
+.fz18 {
+  font-size: $fz18 !important;
+}
+.fz16 {
+  font-size: $fz16 !important;
+}
+.fz14 {
+  font-size: $fz14 !important;
+}
+.fz12 {
+  font-size: $fz12 !important;
+}
+
+//homepage
+
+.p-home-content {
+  height: calc(100vh - 72px);
+  /* Permalink - use to edit and share this gradient. 固定鏈接 - 用於編輯和分享此漸變： https://colorzilla.com/gradient-editor/#f4f4f4+0,feffff+22,f4f4f4+41,ffffff+65,ededed+86,f9f9f9+100 */
+  background: linear-gradient(
+    30deg,
+    #f7f7f7 0%,
+    #ffffff 22%,
+    #f5f5f5 41%,
+    #ffffff 65%,
+    #f3f3f3 86%,
+    #f9f9f9 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.main-top,
+.main-bot {
+  color: $primary;
+  opacity: 0.5;
+}
+
+.main-top:hover,
+.main-bot:hover {
+  opacity: 1;
+}
+
+.main-top:nth-child(1) {
+  background: rgb(226, 226, 226);
+  background: linear-gradient(
+    0deg,
+    rgb(236, 236, 236) 0%,
+    rgb(247, 247, 247) 3%,
+    rgba(255, 255, 255, 0) 5%
+  );
+}
+.main-top:nth-child(2) {
+  background: rgb(226, 226, 226);
+  background: linear-gradient(
+    90deg,
+    rgba(236, 236, 236) 0%,
+    rgba(247, 247, 247) 1%,
+    rgba(255, 255, 255, 0) 3%
+  );
+}
+.main-bot:nth-child(1) {
+  background: rgb(226, 226, 226);
+  background: linear-gradient(
+    270deg,
+    rgba(236, 236, 236) 0%,
+    rgba(247, 247, 247) 1%,
+    rgba(255, 255, 255, 0) 3%
+  );
+}
+.main-bot:nth-child(2) {
+  background: rgb(226, 226, 226);
+  background: linear-gradient(
+    180deg,
+    rgba(236, 236, 236) 0%,
+    rgba(247, 247, 247) 3%,
+    rgba(255, 255, 255, 0) 5%
+  );
+}
+
+.center-text {
+  position: absolute;
+  top: calc(50vh + 24px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* 讓 PRENT 文字分布在兩側 */
+  align-items: center;
+  text-align: center;
+  padding: 0 2.5vw; /* 避免靠太邊 */
+}
+
+.text-reflect {
+  font-size: 2.4rem;
+  font-weight: bold;
+  background: rgb(103, 103, 103);
+  background: linear-gradient(
+    0deg,
+    rgba(103, 103, 103, 1) 0%,
+    rgba(249, 249, 249, 1) 48%,
+    rgba(103, 103, 103, 1) 52%,
+    rgba(249, 249, 249, 1) 100%
+  );
+  color: transparent;
+  background-clip: text;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+  -webkit-box-reflect: below -1rem linear-gradient(transparent, rgba(255, 255, 255, 0.3));
+}
+
+.bg-l {
+  left: calc((50vw - 228px) / 2);
+}
+.bg-r {
+  // right: calc((50vw - 228px) / 2);
+  left: calc((228px + (50vw - 228px) / 2));
+}
+
+.bg-l i,
+.bg-r i {
+  font-size: 5rem;
+}
+.bg-l p,
+.bg-r p {
+  font-size: 1.3rem;
+}
+
+.p-video {
+  width: 30%;
+  box-shadow: 2px 4px 5px #dadada;
+  border: 0.4rem solid #f9f9f9;
+  // background-image: linear-gradient(to right top, #f2f2f2, #f4f4f4, #f7f7f7, #f9f9f9, #fcfcfc, #fcfcfc, #fcfcfc, #fcfcfc, #f9f9f9, #f7f7f7, #f4f4f4, #f2f2f2);
+  max-height: 800px;
+  overflow: hidden;
+}
+
+/* styles/ProductCategories.module.css */
+.category-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7); /* 胶囊的半透明背景 */
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #333; /* 膠囊內字的顏色 */
+}
+
+.service-pro-icon svg {
+  font-size: 32px;
+  color: #ec9466;
+}
+
+.service-price {
+  color: #ec8692;
+  font-size: 32px;
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+}
+
+.service-price .service-price-s {
+  font-size: 18px;
+}
+
+/* .card:hover {
+background-color: #FFFBF8;
+border: 3px solid #EC8692 !important;
+outline: 3px solid #EC8692;
+outline-offset: -3px;
+} */
+
+html {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 壓footer */
+.footer_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* 讓內容區塊填滿可用空間 */
+}
+
+/* navbar css */
+.nav-font {
+  font-weight: 200;
+}
+
+.nav_dec {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(209, 134, 95, 0.1); /* 陰影顏色和模糊 */
+  padding: 4px !important;
+}
+
+.cart-dropdown {
+  max-width: 300px;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* footer css */
+footer {
+  width: 100%;
+  /* background-color: #EC9466; */
+  text-align: center;
+  margin: 0 !important; /* 強制消除 margin */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer_bg {
+  background-color: #ec9466;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer_div {
+  height: 100px;
+  padding-left: 25px !important;
+}
+
+footer h6 {
+  color: white;
+}
+
+.footer_text {
+  font-size: 10px;
+}
+
+.footer_text a {
+  color: white !important;
+  font-weight: 100;
+}
+/* footer css */
+
+// my-btn
+.my-btn {
+  background: none;
+  border: none;
+  color: $primary;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  padding: 0.3rem 0.6rem;
+  transition: background-color 0.2s;
+}
+
+.my-btn::after {
+  content: "\F282";
+  font-family: "bootstrap-icons";
+  border: none;
+  font-size: 0.7rem;
+  vertical-align: middle;
+  font-weight: 600;
+  margin-left: 0.3rem;
+  background: none;
+  border-radius: $border-radius;
+}
+
+.my-btn:hover {
+  background: none;
+  background-color: $primary;
+  color: #fff;
+  border-radius: $border-radius;
+  border-bottom: 1px solid $primary;
+}
+
+.my-btn:active {
+  background-color: $gray !important;
+  color: #fff !important;
+  border-radius: $border-radius;
+  border-bottom: 1px solid $gray !important;
+}
+
+.my-btn:checked {
+  background-color: $primary;
+  color: #fff !important;
+  border-radius: $border-radius;
+  border-bottom: 1px solid $primary !important;
+}
+
+.my-btn:focus {
+  background-color: $secondary;
+  border-radius: $border-radius;
+  border-bottom: 1px solid $secondary;
+}
+
+.my-btn:focus,
+.my-btn:active {
+  background-color: $secondary;
+  border-color: $primary;
+  color: #fff;
+  border-radius: $border-radius;
+}
+
+.dropdown-menu.show {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+}
+
+.dropdown-menu.show:active,
+.dropdown-menu.show:focus {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid $primary !important;
+}
+
+.dropdown-menu.show::after {
+  content: none;
+}
+
+// 在 globals.scss 或元件的 SCSS 檔案中
+.form-check-input:checked {
+  background-color: $secondary; // 更改勾選時的背景顏色
+  border-color: $secondary; // 更改邊框顏色
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(236, 134, 146, 0.25); // 自訂 focus 效果
+}
+
+.form-control,
+.input-group-text {
+  background: none;
+  border-color: $primary;
+}
+
+.input-group-text {
+  color: $primary;
+}
+
+.form-control:focus {
+  border-color: $secondary; // 更改邊框顏色
+  box-shadow: 0 0 0 0.2rem rgba(236, 134, 146, 0.25);
+}
+
+// sort-box
+.sort-box {
+  border: 1px solid $primary;
+  background: none;
+  color: $primary;
+  transition: background-color 0.2s;
+}
+
+.sort-box:hover {
+  background-color: $primary;
+  color: #fff;
+  border: 1px solid $primary;
+}
+
+.sort-box:active {
+  background-color: $gray !important;
+  color: #fff !important;
+  border: 1px solid $gray !important;
+}
+
+.sort-box:focus {
+  background-color: $secondary;
+  border-radius: $border-radius;
+  border: 1px solid $secondary;
+  color: #fff;
+}
+
+.sort-box.show {
+  background-color: $secondary;
+  border-color: $secondary;
+  color: #fff;
+}
+
+.sort-drop:active {
+  background-color: $secondary;
+}
+
+//range
+.range-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap; /* 防止數字換行 */
+  width: 100%;
+  padding: 0.3rem 0.6rem;
+}
+
+.range-value {
+  min-width: 40px; /* 設定最小寬度，確保數字不會變小 */
+  text-align: center;
+}
+
+.range-track {
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  flex-grow: 1;
+  width: 180px;
+}
+
+.range-thumb {
+  width: 16px;
+  height: 16px;
+  background: $primary;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+// btn 樣式
+.btn_square {
+  display: inline-block;
+  color: white;
+  background: $primary;
+  cursor: pointer;
+  border: 1px solid $bg;
+}
+
+.btn_square:hover {
+  background: $secondary;
+}
+
+// swiper
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+  color: white !important;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: $primary;
+  opacity: 0.8;
+  border-radius: 50%;
+  text-align: center;
+  align-content: center;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: $secondary;
+  opacity: 1;
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
+  background-color: $gray;
+  opacity: 1;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 24px !important;
+  font-weight: 700;
+}
+
+// to top btn
+.to_top_btn {
+  position: fixed;
+  bottom: 200px;
+  right: 30px;
+  display: flex;
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+  background: $primary;
+  opacity: 0.9;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  z-index: 999;
+}
+
+.to_top_btn:hover {
+  background: $secondary;
+}
+
+.to_top_btn:active {
+  background: $gray;
+}
+
+// nav-burger
+.navbar-toggler{
+border: none;
+}
+
+.navbar-toggler-icon{
+  color: $primary !important;
+  background-image: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.navbar-toggler-icon::after{
+  color: $primary !important;
+  content: "\F479";
+  font-family: "bootstrap-icons";
+  font-size: 2rem;
+}
+.gotoshop {
+  display: inline-block;
+  padding: 6px 20px;
+  background-color: #8e8e8e;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gotoshop:hover {
+  background-color: #ec9466;
+}
+
+.loading{
+  padding: 1rem 1.5rem;
+  background: #fff;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid $primary;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+
+
+//* 平板 md 768 - 991 */
+@media screen and (min-width: 768px) {
+  // swiper
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex !important;
+  }
+}

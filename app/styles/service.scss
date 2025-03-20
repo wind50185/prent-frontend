@@ -1,0 +1,1037 @@
+@import "./globals.scss";
+
+// * 手機（通用）
+
+// ---------- 手機 - 通用 start ----------
+
+.service_breadcrumb {
+  font-size: 14px;
+}
+
+// ---------- 手機 - 通用 end ----------
+
+// ---------- 手機 - 首頁卡片 start ----------
+
+.service_home_card {
+  position: relative;
+}
+
+// TODO:收藏愛心
+// .service_home_card_heart {
+//   display: inline-block;
+//   position: relative;
+//   // stroke: $primary;
+//   // stroke-width: 5px;
+//   // stroke-linejoin: round;
+//   // stroke-linecap: round;
+//   // paint-order: stroke;
+
+//   // fill: $white;
+
+//   // filter: drop-shadow(2px 2px 0 $primary) drop-shadow(-2px -2px 0 $primary)
+//   //   drop-shadow(-2px 2px 0 $primary) drop-shadow(2px -2px 0 $primary);
+// }
+
+// .service_home_card_heart_down {
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+//   z-index: 97;
+//   color: $primary;
+//   font-weight: 700;
+//   font-size: 26px;
+// }
+
+// .service_home_card_heart_up {
+//   position: absolute;
+//   top: 13px;
+//   right: 14px;
+//   z-index: 98;
+//   color: white;
+//   font-weight: 700;
+//   font-size: 18px;
+// }
+
+// ---------- 手機 - 首頁卡片 end ----------
+
+// ---------- 手機 - 列表卡片 start ----------
+
+.service_pro_link {
+  text-decoration: none;
+}
+
+.responsive_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service_pro_card_title {
+  font-size: 18px;
+  color: $gray;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.service_pro_card_star {
+  font-size: 12px;
+  color: $gray;
+}
+
+.service_pro_card_text {
+  font-size: 16px;
+  color: $gray;
+}
+
+.service-pro-icon svg {
+  font-size: 24px;
+  color: $primary;
+}
+
+.service_pro_card_price {
+  color: $secondary;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.service_pro_card_price-s {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.service_home_card:hover,
+.service_pro_card:hover {
+  background-color: $bg;
+  cursor: pointer;
+}
+
+.service_home_card:hover {
+  outline: 3px solid $secondary;
+  outline-offset: -3px;
+}
+
+// ---------- 手機 - 列表卡片 end ----------
+
+// ---------- 手機 - 服務首頁 start ----------
+
+.service_carousel_img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+
+.service_intro {
+  display: none;
+}
+
+.service_match {
+  background-color: $bg;
+}
+
+.service_match_title {
+  font-size: 30px;
+  color: $primary;
+}
+
+.service_match_item {
+  background: $primary;
+}
+
+.service_match_item:hover {
+  background: $secondary;
+  cursor: pointer;
+}
+
+.service_match_icon {
+  font-size: 48px;
+  color: white;
+}
+
+.service_match_category {
+  color: white;
+  font-size: 18px;
+}
+
+.service_home_category {
+  color: $gray;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service_home_more {
+  font-size: 12px;
+}
+
+.service_home_more a {
+  color: $gray;
+  text-decoration: none;
+}
+
+.service_home_more a:hover {
+  text-decoration: underline 1px $gray !important;
+}
+
+// ---------- 手機 - 服務首頁 end ----------
+
+// ---------- 手機 - 列表頁 start ----------
+
+// TODO: 手機版 RWD
+.service_sort {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service_sort_left {
+  display: flex;
+  align-items: center;
+}
+
+.service_search_result_text {
+  color: $gray;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.service_filter_star_icon {
+  display: flex;
+  color: $gray;
+  font-weight: 400;
+  gap: 0.2rem;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border-radius: 50px;
+  padding: 5px 12px;
+  font-size: 14px;
+  border: 1px solid #ced4da;
+  font-weight: 500;
+}
+
+.filter-pill button {
+  background: none;
+  border: none;
+  color: #6c757d;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.filter-pill:hover {
+  background-color: #e2e6ea;
+}
+
+.filter-pill button:hover {
+  color: #dc3545;
+}
+
+.filter-pill button:focus {
+  outline: none;
+}
+
+.filter-close-icon:hover {
+  cursor: pointer;
+}
+
+// ---------- 手機 - 列表頁 end ----------
+
+// ---------- 手機 - 專家詳情頁 start ----------
+
+// banner 骨架圖
+.skeleton-loader {
+  width: 100%;
+  height: 175px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.service_pro_detail_img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+
+.service_pro_detail_title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $gray;
+}
+
+.service_pro_detail_star {
+  font-size: 14px;
+  color: $gray;
+  display: flex;
+  align-items: center;
+}
+
+.service_pro_detail_subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: $primary;
+}
+
+.service_pro_detail_cate {
+  display: inline-block;
+  font-weight: 400;
+}
+
+.service_pro_detail_cate_icon {
+  font-size: 24px;
+  color: $gray;
+}
+
+.service_pro_detail_cate_text {
+  font-size: 16px;
+  color: $gray;
+  display: none;
+}
+
+.service_pro_detail_text {
+  font-size: 16px;
+  color: $gray;
+  font-weight: 400;
+}
+
+.service_pro_detail_others_title {
+  color: $primary;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+// 過往成果圖片
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 200px;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 10%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide:hover {
+  cursor: pointer;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// 聯絡專家
+.service_pro_contact {
+  padding: 0;
+  padding-top: 16px;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  background: $bg;
+  width: 100%;
+  border-top: 2px solid $primary;
+  z-index: 99;
+}
+
+.service_pro_contact_name {
+  font-size: 22px;
+  color: $gray;
+}
+
+.service_pro_contact_btn {
+  display: inline-block;
+  font-size: 18px;
+  color: white;
+  background: $primary;
+  cursor: pointer;
+  border: 1px solid $bg;
+  text-decoration: none;
+}
+
+.service_pro_contact_btn:hover {
+  background: $secondary;
+}
+
+// ---------- 手機 - 專家詳情頁 end ----------
+
+// ---------- 手機 - 預約頁 start ----------
+
+.service_pro_booking_cate {
+  display: block;
+  color: $gray;
+  border: 1px solid $gray-light;
+  background-color: white;
+  width: 55%;
+  cursor: pointer;
+}
+
+.service_pro_booking_cate:hover {
+  border: 1px solid $primary;
+}
+
+.service_pro_booking_cate_selected {
+  display: block;
+  color: white;
+  border: 1px solid $primary;
+  background-color: $secondary;
+  width: 55%;
+  cursor: pointer;
+}
+
+.service_pro_booking_cate_icon {
+  font-size: 24px;
+}
+
+.service_pro_booking_cate_text {
+  font-size: 16px;
+}
+
+.service_pro_booking_time {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.service_pro_booking_btn {
+  background-color: #fff;
+  color: $gray;
+  border: 1px solid $gray-light;
+  min-width: 90px;
+}
+
+.service_pro_booking_btn:hover {
+  border: 1px solid $primary;
+}
+
+.service_pro_booking_btn_selected {
+  background-color: $secondary;
+  color: white;
+  border: 1px solid $primary;
+  min-width: 90px;
+}
+
+.service_pro_booking_btn_sold_out {
+  border: 1px solid #bababa;
+  background-color: #f1f1f1;
+  color: #bababa;
+  min-width: 90px;
+  cursor: default;
+}
+
+.service_pro_booking_next_btn {
+  display: block;
+  background-color: $primary;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin: auto;
+  width: 150px;
+  cursor: pointer;
+  border: none;
+}
+
+.service_pro_booking_next_btn:hover {
+  background-color: $secondary;
+}
+
+// modal
+.service_pro_booking_modal_title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: $gray;
+  font-size: 24px;
+}
+
+.service_pro_booking_modal_title_icon {
+  color: $success;
+  font-size: 24px;
+}
+
+.service_pro_booking_modal_subtitle {
+  font-size: 18px;
+  color: $gray;
+}
+
+.service_pro_booking_modal_content {
+  font-size: 16px;
+  color: $gray;
+  width: 70%;
+  margin: auto;
+}
+
+.service_pro_booking_modal_info {
+  color: $gray;
+  font-size: 14px;
+}
+
+.service_pro_booking_modal_btn_1 {
+  border: 1px solid $primary;
+  background: white;
+  color: $primary;
+}
+
+.service_pro_booking_modal_btn_1:hover {
+  border: 1px solid $secondary;
+  color: $secondary;
+}
+
+.service_pro_booking_modal_btn_1:active {
+  border: 1px solid $gray;
+  background: white;
+  color: $gray;
+}
+
+.service_pro_booking_modal_btn_2 {
+  border: none;
+  background: $primary;
+  color: white;
+}
+
+.service_pro_booking_modal_btn_2:hover {
+  background: $secondary;
+}
+
+.service_pro_booking_modal_btn_2:active {
+  background: $gray;
+}
+
+// ---------- 手機 - 預約頁 end ----------
+
+// ---------- 手機 - 我的預約卡片 start ----------
+
+.service_pro_booking_card {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid white;
+  background-color: white;
+  align-items: center;
+  align-content: center;
+}
+
+.service_pro_booking_card:hover {
+  background-color: $bg;
+}
+
+.service_pro_booking_card_state {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.service_pro_booking_card_state_icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $success;
+}
+
+.service_pro_booking_card_state_text {
+  color: $gray;
+  font-size: 16px;
+}
+
+.service_pro_booking_card_pro {
+  display: flex;
+}
+
+.service_pro_booking_card_img {
+  width: 30%;
+}
+
+.service_pro_booking_card_pro_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.service_pro_booking_card_pro_name {
+  color: $gray;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.service_pro_booking_card_pro_service {
+  display: flex;
+  align-items: center;
+}
+
+.service_pro_booking_card_pro_service_icon {
+  color: $gray;
+  font-size: 24px;
+  line-height: 14px;
+}
+
+.service_pro_booking_card_pro_service_name {
+  color: $gray;
+  font-size: 14px;
+}
+
+.service_pro_booking_card_time {
+  display: flex;
+}
+
+.service_pro_booking_card_time_icon {
+  color: $gray;
+  font-size: 24px;
+  line-height: 16px;
+}
+
+.service_pro_booking_card_pro_time_text {
+  color: $gray;
+  font-size: 16px;
+}
+
+.service_pro_booking_card_options {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.service_pro_booking_card_options:hover {
+  cursor: pointer;
+}
+
+.service_pro_booking_card_options_btn {
+  display: flex;
+  align-items: center;
+}
+
+.service_pro_booking_card_options_btn_icon {
+  color: $gray;
+  font-size: 20px;
+  line-height: 14px;
+}
+
+.service_pro_booking_card_options_text {
+  color: $gray;
+  font-size: 14px;
+}
+
+.service_pro_booking_card_options_text:hover {
+  text-decoration: underline 1px $gray;
+  // cursor: pointer;
+}
+
+// ---------- 手機 - 我的預約卡片 end ----------
+
+//* 平板 md 768 - 991 */
+@media screen and (min-width: 768px) {
+  // ---------- 平板 - 通用 start ----------
+
+  .service_breadcrumb {
+    font-size: 16px;
+  }
+
+  // ---------- 平板 - 通用 end ----------
+
+  // ---------- 平板 - 列表卡片 start ----------
+
+  .service_pro_card_title {
+    font-size: 18px;
+  }
+
+  .service_pro_card_star {
+    font-size: 14px;
+  }
+
+  .service_pro_card_text {
+    font-size: 14px;
+  }
+
+  .service-pro-icon svg {
+    font-size: 32px;
+    color: $primary;
+  }
+
+  .service_pro_card_price {
+    font-size: 32px;
+  }
+  .service_pro_card_price-s {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  // ---------- 平板 - 列表卡片 end ----------
+
+  // ---------- 平板 - 服務首頁 start ----------
+
+  .service_carousel_img {
+    height: 400px;
+    object-position: bottom;
+  }
+
+  .service_intro {
+    display: block;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    z-index: 99;
+  }
+
+  .service_intro_title {
+    color: $gray;
+    font-size: 24px;
+  }
+
+  .service_intro_text {
+    color: $gray;
+  }
+
+  .service_intro_btn {
+    border: none;
+    color: white;
+    background: $secondary;
+    font-size: 18px;
+    letter-spacing: 0.3rem;
+  }
+
+  .service_intro_btn:hover {
+    background: #c15640;
+  }
+
+  .service_match_title {
+    font-size: 32px;
+  }
+
+  .service_match_item {
+    height: 250px;
+  }
+
+  .service_match_icon {
+    font-size: 80px;
+  }
+
+  .service_match_category {
+    font-size: 24px;
+  }
+
+  .service_home_category {
+    font-size: 22px;
+  }
+
+  .service_home_more {
+    font-size: 14px;
+  }
+
+  // ---------- 平板 - 服務首頁 end ----------
+
+  // ---------- 平板 - 列表頁 start ----------
+
+  .service_search_result_text {
+    color: $gray;
+    font-size: 16px;
+    font-weight: 200;
+  }
+
+  .filter-pill {
+    border-radius: 50px;
+    padding: 5px 12px;
+    font-size: 14px;
+  }
+
+  .filter-pill button {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+
+  // ---------- 平板 - 列表頁 end ----------
+
+  // ---------- 平板 - 專家詳情頁 start ----------
+
+  .skeleton-loader {
+    height: 400px;
+  }
+
+  .service_pro_detail_img {
+    height: 400px;
+  }
+
+  .service_pro_detail_title {
+    font-size: 32px;
+  }
+
+  .service_pro_detail_star {
+    font-size: 16px;
+  }
+
+  .service_pro_detail_subtitle {
+    font-size: 22px;
+  }
+
+  .service_pro_detail_cate {
+    margin-right: 1.5rem;
+    text-align: center;
+  }
+
+  .service_pro_detail_cate_icon {
+    font-size: 32px;
+  }
+
+  .service_pro_detail_cate_text {
+    font-size: 18px;
+    display: block;
+  }
+
+  .service_pro_detail_text {
+    font-size: 18px;
+  }
+
+  .service_pro_detail_others_title {
+    font-size: 22px;
+  }
+
+  // 過往成果
+  .mySwiper2 {
+    height: 250px;
+  }
+
+  .mySwiper {
+    height: 8%;
+  }
+
+  // 聯絡專家
+  .service_pro_contact {
+    padding: 16px;
+    position: sticky;
+    top: 82px;
+    border: 2px solid $primary;
+    border-radius: 10px;
+    background: white;
+  }
+
+  .service_pro_contact_btn {
+    font-size: 20px;
+    border-radius: 8px;
+  }
+
+  // ---------- 平板 - 專家詳情頁 end ----------
+
+  // ---------- 平板 - 預約頁 start ----------
+
+  .service_pro_booking_cate {
+    width: 35%;
+  }
+
+  .service_pro_booking_cate_selected {
+    width: 35%;
+  }
+
+  .service_pro_booking_time {
+    gap: 1.5rem;
+  }
+
+  .service_pro_booking_btn {
+    min-width: 120px;
+  }
+
+  .service_pro_booking_btn_selected {
+    min-width: 120px;
+  }
+
+  .service_pro_booking_btn_sold_out {
+    min-width: 120px;
+  }
+
+  // modal
+  .service_pro_booking_modal_title {
+    font-size: 32px;
+  }
+
+  .service_pro_booking_modal_title_icon {
+    font-size: 32px;
+  }
+
+  .service_pro_booking_modal_subtitle {
+    font-size: 22px;
+  }
+
+  .service_pro_booking_modal_content {
+    font-size: 18px;
+  }
+
+  .service_pro_booking_modal_info {
+    font-size: 16px;
+  }
+
+  // ---------- 平板 - 預約頁 end ----------
+
+  // ---------- 平板 - 我的預約卡片 start ----------
+
+  .service_pro_booking_card_pro {
+    display: flex;
+    width: 60%;
+    align-items: center;
+  }
+
+  .service_pro_booking_card_time {
+    display: flex;
+    align-items: center;
+  }
+
+  .service_pro_booking_card_options {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .service_pro_booking_card_options_btn_icon {
+    color: $gray;
+    font-size: 24px;
+    line-height: 16px;
+  }
+
+  .service_pro_booking_card_options_text {
+    color: $gray;
+    font-size: 16px;
+  }
+
+  // ---------- 平板 - 我的預約卡片 end ----------
+}
+
+//* PC lg 992 up */
+@media screen and (min-width: 992px) {
+  // ---------- PC - 服務首頁 start ----------
+
+  .service_carousel_img {
+    height: 600px;
+  }
+
+  .service_intro {
+    width: 45%;
+    top: 420px;
+    left: 0px;
+  }
+
+  // ---------- PC - 服務首頁 end ----------
+
+  // ---------- PC - 專家詳情頁 start ----------
+
+  .skeleton-loader {
+    height: 600px;
+  }
+
+  .service_pro_detail_img {
+    height: 600px;
+  }
+
+  // 過往成果
+  .mySwiper2 {
+    height: 400px;
+  }
+
+  .mySwiper {
+    height: 10%;
+  }
+
+  // ---------- PC - 專家詳情頁 end ----------
+
+  // ---------- PC - 預約頁 start ----------
+
+  .service_pro_booking_cate {
+    width: 25%;
+  }
+
+  .service_pro_booking_cate_selected {
+    width: 25%;
+  }
+
+  .service_pro_booking_time {
+    gap: 1rem;
+  }
+
+  // ---------- PC - 預約頁 end ----------
+
+  // ---------- PC - 我的預約卡片 start ----------
+
+  .service_pro_booking_card_state {
+    width: 12%;
+  }
+
+  .service_pro_booking_card_img {
+    width: 30%;
+  }
+
+  .service_pro_booking_card_pro {
+    width: 28%;
+  }
+
+  .service_pro_booking_card_time {
+    width: 25%;
+  }
+
+  .service_pro_booking_card_options {
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: space-between;
+  }
+
+  .service_pro_booking_card_options_btn {
+    margin-left: 1rem;
+  }
+
+  .service_pro_booking_card_options_btn_icon {
+    color: $gray;
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  .service_pro_booking_card_options_text {
+    color: $gray;
+    font-size: 14px;
+  }
+
+  // ---------- PC - 我的預約卡片 end ----------
+}
